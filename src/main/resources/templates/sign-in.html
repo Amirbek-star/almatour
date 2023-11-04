@@ -1,20 +1,24 @@
 <html lang="en"
       layout:decorate="./layout/main.html"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-<div layout:fragment="main_content">
-    <div style="margin-top:50px;display: flex; justify-content: center; width: 100%">
+<div layout:fragment="main_content" class="main_content">
+    <div class="form">
+        <h1>Welcome</h1>
         <form th:action = "@{'/to-sign-in'}" method="post">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                 <input name="user_email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
                 <input name="user_password" type="password" class="form-control" id="exampleInputPassword1">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="form_btn">Submit</button>
         </form>
+    </div>
+    <button class="have-account">Have you account already?</button>
+    <div class="main_content_right">
+        <img src="https://i.pinimg.com/originals/e6/fc/9f/e6fc9fc69c04888c70bb5b48d113df12.jpg">
     </div>
 </div>
 </html>
